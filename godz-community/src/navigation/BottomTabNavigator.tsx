@@ -104,14 +104,13 @@ export default function BottomTabNavigator() {
 const styles = StyleSheet.create({
   naviBar: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-end',
     justifyContent: 'space-between',
     backgroundColor: COLORS.card,
     paddingHorizontal: 12,
-    height: 56,
-    borderBottomWidth: 0.5,
-    borderBottomColor: COLORS.secondary,
+    height: 56 * 1.4 * 1.2, // เพิ่มความสูงอีก 20% จากเดิมที่เพิ่ม 40%
     paddingTop: Platform.OS === 'android' ? (StatusBar.currentHeight || 0) : 0,
+    paddingBottom: 0,
   },
   naviTitle: {
     color: COLORS.background,
@@ -121,9 +120,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginLeft: 8,
     marginRight: 8,
+    marginBottom: 6, // ชิดขอบล่าง
   },
   bell: {
     marginLeft: 8,
+    marginBottom: 6, // ชิดขอบล่าง
   },
   connectBtn: {
     flexDirection: 'row',
@@ -133,6 +134,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 6,
     marginRight: 8,
+    marginBottom: 6, // ชิดขอบล่าง
   },
   connectBtnText: {
     color: COLORS.background,
