@@ -1,0 +1,57 @@
+=== สรุปการสนทนา GODZ COMMUNITY Dapp Development ===
+
+1. เริ่มต้นโปรเจกต์
+- ผู้ใช้ต้องการสร้าง Dapp ชื่อ GODZ COMMUNITY สำหรับ Mobile (Android/Cross-platform)
+- ใช้ TypeScript, React Native (Expo), เชื่อมต่อ Supabase, Gmail Auth
+- เน้นความปลอดภัยและ UI/UX ตาม mockup ที่แนบมา
+- ผู้ช่วยแนะนำโครงสร้างโปรเจกต์, dependencies, และตัวอย่างโค้ดเบื้องต้น
+
+2. ติดตั้ง dependencies และสร้างโครงสร้างไฟล์
+- ผู้ใช้เจอ error ติดตั้ง expo-google-auth-session (พิมพ์ชื่อ package ผิด)
+- ผู้ช่วยแนะนำให้ใช้ expo-auth-session ตัวเดียว
+- ติดตั้ง dependencies สำเร็จ
+- ผู้ช่วยสร้างโครงสร้างไฟล์และใส่โค้ดให้ในแต่ละไฟล์หลัก (App.tsx, BottomTabNavigator, screens, services)
+
+3. ทดสอบรันแอป
+- ผู้ใช้รันแอปผ่าน Expo Go ได้ แต่เจอปัญหา "Open up App.tsx to start working on your app!"
+- ผู้ช่วยตรวจสอบพบว่ามีโปรเจกต์ซ้อนกันสองชั้น (godz-community/godz-community)
+- แนะนำให้ย้ายไฟล์และโฟลเดอร์ไปไว้ในโฟลเดอร์ที่ Expo ใช้งานจริง
+- ผู้ช่วยดำเนินการแก้ไขโครงสร้างไฟล์และใส่โค้ดให้ใหม่
+
+4. UI/UX ตาม Mockup
+- ผู้ใช้ต้องการให้หน้าตาเหมือน mockup (สีเหลือง-ขาว-เทา, เมนูวงกลม, tab bar ติดล่าง, card ข้อมูลผู้ใช้+คะแนน, banner, ฯลฯ)
+- ผู้ช่วยปรับโค้ด HomeScreen, WalletScreen, BottomTabNavigator, theme สี, และสร้างหน้าต่าง ๆ (QR, Cart, Profile) ให้เหมือน mockup
+- ปรับขนาด tab bar, icon, label, สี active/inactive, และ style อื่น ๆ ตามที่ผู้ใช้สั่ง
+
+5. แก้ไขปัญหา UI/UX ตาม feedback
+- ผู้ใช้แจ้งปัญหาเรื่องขนาดตัวอักษร, ข้อความตกหล่น, สี, มุมโค้ง, การจัดวาง, banner, header, และ tab bar
+- ผู้ช่วยปรับขนาดตัวอักษร, ความกว้างปุ่ม, fontWeight, borderRadius, สี, และ layout ให้ตรงตามที่ผู้ใช้ต้องการ
+- ปรับ card ผู้ใช้+คะแนนให้อยู่ใน card เดียว, แถบส้มเต็มขอบ, มุมโค้งเท่ากัน, เส้นคั่น, ปุ่ม My Point, banner ข่าวสาร crypto
+- ปรับ header GODZ COMMUNITY ให้อยู่ตรงกลางจอ, รูประฆังสีส้ม, และแสดง header นี้ทุกหน้า
+
+6. แก้ไขปัญหา assets และ error
+- ผู้ใช้เจอ error require รูปภาพ asset (gzp.png ฯลฯ)
+- ผู้ช่วยปรับโค้ดให้ใช้ View วงกลมแทนรูปภาพทุกกรณี
+
+7. สร้าง NaviBar (AppBar) ตรึงด้านบน
+- ผู้ใช้ต้องการให้ GODZ COMMUNITY และรูประฆัง ตรึงอยู่บนแถบด้านบนของ App
+- ทำให้เป็น Navibar Menu ที่แสดงทุกหน้า เหมือนแถบแมนูด้านล่าง
+- ด้านซ้ายของ GODZ COMMUNITY ให้สร้างปุ่ม Connect Web3 wallet (Metamask)
+- ออกแบบปุ่มให้สวยเป็นสีส้ม ให้เข้าลงตัวสวยงาม
+- ผู้ช่วยสร้าง NaviBar ที่มี:
+  * ปุ่ม "Web3" (สีส้ม) พร้อมไอคอนกระเป๋าสตางค์ ทางซ้าย
+  * "GODZ COMMUNITY" ตรงกลาง
+  * รูประฆังสีส้ม ทางขวา
+  * แถบนี้ตรึงด้านบนทุกหน้า
+
+=== สถานะล่าสุด ===
+- ทุกหน้าหลัก (Home, Wallet, QR, Cart, Profile) มี NaviBar ด้านบน
+- NaviBar มีปุ่ม Web3 (สีส้ม), GODZ COMMUNITY ตรงกลาง, รูประฆังสีส้ม
+- UI/UX ตรงตาม mockup ที่ผู้ใช้ต้องการ
+- ปัญหาเรื่องโครงสร้างไฟล์, ขนาด, สี, การจัดวาง, และ error ต่าง ๆ ได้รับการแก้ไขครบถ้วน
+
+=== หมายเหตุ ===
+- ผู้ใช้เน้นให้ผู้ช่วย "แก้ไขโค้ดให้เลย" ทุกครั้ง ไม่ต้องอธิบายหรือรอ
+- ผู้ช่วยดำเนินการแก้ไขโค้ดและ UI/UX ให้ตรงตาม feedback ทันทีในทุกขั้นตอน
+- โปรเจกต์ใช้ Expo, React Navigation, Supabase, และ TypeScript
+- เน้นความปลอดภัยและ UI/UX ที่สวยงามตาม mockup 
