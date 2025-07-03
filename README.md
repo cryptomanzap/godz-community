@@ -400,4 +400,4 @@ The app includes analytics tracking for:
 
 ---
 
-**Made with ❤️ by the GODZ Community Team** 0
+**Made with ❤️ by the Cryptoman # GODZ Community Team** 
